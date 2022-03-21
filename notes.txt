@@ -24,3 +24,7 @@ Database models help us, as developers, make our application more predictable an
 server and database server, but it doesn't affect how clients make that request in the first place
 unless very descriptive API documentation is provided. The addition of these GraphQL type definitions, however,
 add that client-facing layer which provides users with a level of predictability and expectations.
+
+
+Remember, without the { new: true } flag in User.findByIdAndUpdate(),
+Mongo would return the original document instead of the updated document.

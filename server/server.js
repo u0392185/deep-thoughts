@@ -5,6 +5,7 @@ const db = require('./config/connection');
 const {
   ApolloServerPluginLandingPageGraphQLPlayground
 } = require("apollo-server-core");
+const { authMiddleware } = require('./utils/auth')
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -14,8 +15,7 @@ const startServer = async () => {
   const server = new ApolloServer({
     typeDefs,
     resolvers,
-    typeDefs,
-    resolvers,
+    context: authMiddleware,
     plugins: [
       ApolloServerPluginLandingPageGraphQLPlayground(),
     ],
