@@ -28,3 +28,12 @@ add that client-facing layer which provides users with a level of predictability
 
 Remember, without the { new: true } flag in User.findByIdAndUpdate(),
 Mongo would return the original document instead of the updated document.
+
+Look at this cool code.
+    `export declare const createHttpLink: (linkOptions?: HttpOptions) => ApolloLink;`
+
+
+Set up the URL for proxy server only. This doesn't set the URI portion.
+    "proxy": "http://localhost:3001",
+
+
