@@ -37,3 +37,4 @@ Set up the URL for proxy server only. This doesn't set the URI portion.
     "proxy": "http://localhost:3001",
 
 
+You usually only have to manually update the cache when adding or deleting items from an array. 
